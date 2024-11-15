@@ -1,0 +1,277 @@
+{
+  "_version": "1.53.0",
+  "sap.app": {
+    "id": "hospitalmanage",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.14.5",
+      "toolsId": "0d8a6701-3c8e-44cc-81aa-5038012f65c0"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZHM_PROJECT_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "HSM-manage": {
+          "semanticObject": "HSM",
+          "action": "manage",
+          "title": "{{flpTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.114.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "hospitalmanage.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "hospitalmanage.view",
+        "controlAggregation": "detailPages",
+        "controlId": "splitApp",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "login",
+          "target": "login"
+        },
+      {
+          "name": "home",
+          "pattern": "home",
+          "target": "home"
+      },
+      {
+          "pattern": "admin",
+          "name": "admin",
+          "target": "admin"
+      },
+      {
+        "pattern": "patientlist",
+        "name": "patientlist",
+        "target": "patientlist"
+    },
+     {
+      "pattern": "appointmentlist",
+      "name": "appointmentlist",
+      "target": "appointmentlist"
+    },
+     {
+      "pattern": "prescriptionlist",
+      "name": "prescriptionlist",
+      "target": "prescriptionlist"
+    },
+     {
+      "pattern": "adddoctor",
+      "name": "adddoctor",
+      "target": "adddoctor"
+    },
+     {
+      "pattern": "deletedoctor",
+      "name": "deletedoctor",
+      "target": "deletedoctor"
+    },
+     {
+      "name": "home1",
+      "pattern": "home1",
+      "target": "home1"
+    },
+     {
+      "name": "appoint",
+      "pattern": "appoint",
+      "target": "appoint"
+    },
+    {
+      "name": "Prescriptionsgiven",
+      "pattern": "Prescriptionsgiven",
+      "target": "Prescriptionsgiven"
+    }, 
+     {
+      "name": "home2",
+      "pattern": "home2",
+      "target": "home2"
+    },
+     {
+      "name": "bookappoint",
+      "pattern": "bookappoint",
+      "target": "bookappoint"
+    },
+    {
+      "name": "AppointmentHistory",
+      "pattern": "AppointmentHistory",
+      "target": "AppointmentHistory"
+    },
+    {
+      "name": "Prescriptionsreceived",
+      "pattern": "Prescriptionsreceived",
+      "target": "Prescriptionsreceived"
+    }
+     
+      ],
+      "targets": {
+        "login": {
+        "viewType": "XML",
+        "viewName": "Login",
+        "viewId": "Login",
+        "viewLevel": 0
+      },
+
+        "home": {
+            "viewType": "XML",
+            "viewName": "Home",
+            "viewId": "Home"
+        },
+        "admin": {
+            "viewType": "XML",
+            "viewName": "Admin",
+            "viewId": "Admin"
+        },
+        "patientlist": {
+            "viewType": "XML",
+            "viewName": "Patientlist",
+            "viewId": "Patientlist"
+        },
+        "appointmentlist": {
+            "viewType": "XML",
+            "viewName": "Appointmentlist",
+            "viewId": "Appointmentlist"
+        },
+        "prescriptionlist": {
+          "viewType": "XML",
+          "viewName": "Prescriptionlist",
+          "viewId": "Prescriptionlist"
+      },
+      "adddoctor": {
+          "viewType": "XML",
+          "viewName": "Adddoctor",
+          "viewId": "Adddoctor"
+      },
+       "deletedoctor": {
+          "viewType": "XML",
+          "viewName": "Deletedoctor",
+          "viewId": "Deletedoctor"
+      },
+       "home1": {
+         "viewType": "XML",
+         "viewName": "Home1",
+         "viewId": "Home1"
+      },
+      "appoint": {
+        "viewType": "XML",
+        "viewName": "Appoint",
+        "viewId": "Appoint"
+      },
+      "Prescriptionsgiven": {
+        "viewType": "XML",
+        "viewName": "Prescriptionsgiven",
+        "viewId": "Prescriptionsgiven"
+      },
+      "home2": {
+        "viewType": "XML",
+        "viewName": "Home2",
+        "viewId": "Home2"
+      },
+      "bookappoint": {
+        "viewType": "XML",
+        "viewName": "Bookappoint",
+        "viewId": "Bookappoint"
+      },
+      "AppointmentHistory": {
+        "viewType": "XML",
+        "viewName": "AppointmentHistory",
+        "viewId": "AppointmentHistory"
+      },
+      "Prescriptionsreceived": {
+        "viewType": "XML",
+        "viewName": "Prescriptionsreceived",
+        "viewId": "Prescriptionsreceived"
+      }
+      }
+    },
+    "rootView": {
+      "viewName": "hospitalmanage.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "hospitalmanage"
+  }
+}

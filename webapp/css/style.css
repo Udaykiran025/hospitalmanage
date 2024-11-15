@@ -1,0 +1,15 @@
+/* Enter your custom styles here */
+
+.iconText {
+    margin-top: 1rem; /* Adjust the margin between the icon and text */
+    font-size: 1.2rem; /* Slightly larger text to match the icon size */
+}
+
+.iconLink {
+    margin-top: 0.5rem; /* Ensure links are spaced appropriately from text */
+    font-size: 1rem; /* Adjust the size of the links */
+}
+
+.sapUiSmallMarginTop {
+    margin-top: 2rem; /* Ensure there is space between rows */
+}

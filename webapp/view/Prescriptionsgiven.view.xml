@@ -1,0 +1,63 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="hospitalmanage.controller.Prescriptionsgiven">
+
+    <VBox>
+        <Table
+            id="prescriptionsTable"
+            items="{viewModel>/prescriptions}"
+            inset="false"
+            headerText="Patient Prescriptions">
+            
+            <columns>
+                <Column>
+                    <Text text="ID"/>
+                </Column>
+                <Column>
+                    <Text text="Patient ID"/>
+                </Column>
+                <Column>
+                    <Text text="Doctor"/>
+                </Column>
+                <Column>
+                    <Text text="First Name"/>
+                </Column>
+                <Column>
+                    <Text text="Last Name"/>
+                </Column>
+                <Column>
+                    <Text text="Appointment Date"/>
+                </Column>
+                <Column>
+                    <Text text="Appointment Time"/>
+                </Column>
+                <Column>
+                    <Text text="Disease"/>
+                </Column>
+                <Column>
+                    <Text text="Allergy"/>
+                </Column>
+                <Column>
+                    <Text text="Prescription"/>
+                </Column>
+            </columns>
+            
+            <items>
+                <ColumnListItem>
+                    <Text text="{viewModel>Id}"/>
+                    <Text text="{viewModel>Pid}"/>
+                    <Text text="{viewModel>Doctor}"/>
+                    <Text text="{viewModel>Fname}"/>
+                    <Text text="{viewModel>Lname}"/>
+                    <Text text="{viewModel>Appdate}"/>
+                    <Text text="{viewModel>Apptime}"/>
+                    <Text text="{viewModel>Disease}"/>
+                    <Text text="{viewModel>Allergy}"/>
+                    <Text text="{viewModel>Prescription}"/>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </VBox>
+
+</mvc:View>

@@ -1,0 +1,49 @@
+<mvc:View
+    controllerName="hospitalmanage.controller.Bookappoint"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:layout="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form">
+
+    <Page title="Create Appointment">
+        <content>
+            <form:SimpleForm 
+                id="appointmentForm" 
+                editable="true" 
+                layout="ResponsiveGridLayout" 
+                labelSpanL="3" 
+                labelSpanM="3" 
+                emptySpanL="4" 
+                emptySpanM="4" 
+                columnsL="1" 
+                columnsM="1">
+
+                <!-- Doctor Name (Dropdown) -->
+                <Label text="Doctor Name" />
+                <Select id="doctorSelect" change="onDoctorChange" forceSelection="true" items="{
+                    path: '/zdoctorSet',
+                    templateShareable: false
+                }">
+                <core:Item key="{Doctorid}" text="{Username}" />
+                </Select>
+
+                <!-- Consultancy Fees (Auto-populated) -->
+                <Label text="Consultancy Fees" />
+                <Input id="doctorFees" editable="false" />
+
+                <!-- Appointment Date -->
+                <Label text="Appointment Date" />
+                <DatePicker id="appointmentDate" />
+
+                <!-- Appointment Time -->
+                <Label text="Appointment Time" />
+                <TimePicker id="appointmentTime" />
+
+                <!-- Submit Button -->
+                <Button text="Submit" press="onSubmit" />
+                
+            </form:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

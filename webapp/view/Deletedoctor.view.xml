@@ -1,0 +1,68 @@
+<mvc:View controllerName="hospitalmanage.controller.Deletedoctor"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:u="sap.ui.unified"
+    xmlns:core="sap.ui.core" class="viewPadding"
+    xmlns="sap.m">
+    <Page id="deletedoctor" title="Delete Doctor">
+        <content>
+            <VBox id="_IDGenVBox391" class="sapUiSmallMargin">
+                <f:SimpleForm id="SimpleFormChange480_1230"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    labelSpanXL="4" 
+                    labelSpanL="4"
+                    labelSpanM="12"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="0"
+                    emptySpanL="0"
+                    emptySpanM="0"
+                    emptySpanS="0"
+                    columnsXL="2"
+                    columnsL="2"
+                    columnsM="1"
+                    singleContainerFullSize="false">
+                    
+                    <core:Title id="_IDGenTitle831" />
+                    <Label id="_IDGenLabel28" text="Doctor Id" />
+                    <Input id="doctorid" value="{formData>/Doctorid}" type="Text" width="40%" placeholder="Enter Doctor Id" required="true"/>
+                    
+                    <!-- Added Fetch Button -->
+                    <Label/>
+                    <Button id="_IDGenFetchButton" type="Emphasized" text="Fetch" width="15%" press="onPressFetch">
+                        <layoutData><OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData42" priority="NeverOverflow" /></layoutData>
+                    </Button>
+                    
+                    
+                    <!-- Additional Input Fields with Editable False -->
+                    <Label text="Username"/>
+                    <Input id="username1" value="{formData>/Username}" editable="false" width="40%" />
+
+                    <Label text="Password"/>
+                    <Input id="password1" value="{formData>/Password}" editable="false" width="40%" />
+
+                    <Label text="Email"/>
+                    <Input id="email1" value="{formData>/Email}" editable="false" width="40%" />
+
+                    <Label text="Specialization"/>
+                    <Input id="specialization" value="{formData>/Specialization}" editable="false" width="40%" />
+
+                    <Label text="Consultancy Fee"/>
+                    <Input id="consultancyFee" value="{formData>/Docfees}" editable="false" width="40%" />
+
+					  <!-- Existing Delete Doctor Button -->
+                    <Label/>
+                    <OverflowToolbar id="_IDGenOverflowToolbar381">
+                        <ToolbarSpacer id="_IDGenToolbarSpacer381"/>
+                        <Button id="_IDGenButton23" type="Emphasized" text="Delete Doctor" press="onPressDelete">
+                            <layoutData><OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData431" priority="NeverOverflow" /></layoutData>
+                        </Button>
+                    </OverflowToolbar>
+
+                </f:SimpleForm>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

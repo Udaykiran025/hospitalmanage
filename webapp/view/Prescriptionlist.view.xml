@@ -1,0 +1,48 @@
+<mvc:View controllerName="hospitalmanage.controller.Prescriptionlist"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="prescriptionlist" title="Prescription List">
+        <content >
+
+             <Table id="_IDGenTable1" items="{/zprescriptionSet}">
+                <columns>
+                    <Column id="_IDGenColumn145"><Text id="_IDGenText233" text="Doctor"/></Column>
+                    <Column id="_IDGenColumn1"><Text id="_IDGenText3" text="Patient Id"/></Column>
+                    <Column id="_IDGenColumn2"><Text id="_IDGenText4" text="Id"/></Column>
+                    <Column id="_IDGenColumn3"><Text id="_IDGenText5" text="First Name"/></Column>
+                    <Column id="_IDGenColumn33"><Text id="_IDGenText517" text="Last Name"/></Column>
+                    <Column id="_IDGenColumn3039"><Text id="_IDGenText581" text="Appdate"/></Column>
+                    <Column id="_IDGenColumn323"><Text id="_IDGenText54561" text="Apptime"/></Column>
+                    <Column id="_IDGenColumn93"><Text id="_IDGenText57" text="Disease"/></Column>
+                    <Column id="_IDGenColumn79"><Text id="_IDGenText31" text="Allergy"/></Column>
+                    <Column id="_IDGenColumn103"><Text id="_IDGenText521" text="Prescription"/></Column>
+                    <!--Column id="_IDGenColumn023"><Text id="_IDGenText049" text="Action"/></Column-->
+                </columns>
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1" type="Navigation" press="onNavObject">
+                        <cells>
+                            <Text id="_IDGenText566" text="{Doctor}"/>
+                            <Text id="_IDGenText6" text="{Pid}"/>
+                            <Text id="_IDGenText7" text="{Id}"/>
+                            <Text id="_IDGenText87" text="{Fname}"/>
+                            <Text id="_IDGenText21" text="{Lname}"/>
+                            <Text id="_IDGenText8387" text="{Appdate}"/>
+                            <Text id="_IDGenText2261" text="{Apptime}"/>
+                            <Text id="_IDGenText421" text="{Disease}"/>
+                            <Text id="_IDGenText827" text="{Allergy}"/>
+                            <Text id="_IDGenText2861" text="{Prescription}"/>
+                            
+                            <!--HBox>
+                                <Button id="_IDGenButton31" class='sapUiTinyMarginEnd' icon="sap-icon://delete" press="ondelete"></Button>
+                                <Button id="_IDGenButton1" icon="sap-icon://edit-outside" press="onupdate"></Button>
+                            </HBox-->
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+				</content>
+
+         
+     
+    </Page>
+</mvc:View>

@@ -1,0 +1,37 @@
+<mvc:View controllerName="hospitalmanage.controller.Home2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="mainPage" title="Welcome"> 
+    <customHeader>
+                <Toolbar>
+                    <Title text="Global Hospitals" />
+                    <ToolbarSpacer />
+                    <Button text="Logout" press="onLogout" icon="sap-icon://log" />
+                </Toolbar>
+            </customHeader>
+                    <content>
+                    <VBox width="60%" alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
+                        <HBox justifyContent="Center" width="100%">
+                            <!-- Book My Appointment Section -->
+                            <VBox alignItems="Center" class="sapUiSmallMargin">
+                                <Button icon="sap-icon://appointment-2" type="Emphasized" press="onNavToBookAppointment" />
+                                <Text text="Book My Appointment" class="iconText" />
+                                <Link text="Book Appointment" press="onNavToBookAppointment" class="iconLink" />
+                            </VBox>
+                            <!-- View Appointment History Section -->
+                            <VBox alignItems="Center" class="sapUiSmallMargin">
+                                <Button icon="sap-icon://paper-plane" type="Emphasized" press="onNavToAppointmentHistory" />
+                                <Text text="My Appointments" class="iconText" />
+                                <Link text="View Appointment History" press="onNavToAppointmentHistory" class="iconLink" />
+                            </VBox>
+                            <VBox alignItems="Center" class="sapUiSmallMargin">
+                        <Button icon="sap-icon://write-new-document" type="Emphasized" press="onPrescriptionreceived" />
+                        <Text text="Prescription Received" class="iconText" />
+                        <Link text="Prescription List" press="onPrescriptionreceived" class="iconLink" />
+                    </VBox>
+                        </HBox>
+                    </VBox>
+                        <!-- This content will be dynamically replaced based on tab selection -->
+                    </content>
+                </Page>
+</mvc:View>

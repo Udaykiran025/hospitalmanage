@@ -1,0 +1,49 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="hospitalmanage.controller.Appoint">
+
+    <VBox class="sapUiSmallMargin">
+        <Title text="Doctor's Appointments" level="H2" />
+
+        <Table
+            id="appointmentsTable"
+            items="{viewModel>/appointments}"
+            itemPress="onAppointmentSelect"
+            mode="SingleSelect">
+            <columns>
+                <Column><Text text="Appointment ID" /></Column>
+                <Column><Text text="Patient Name" /></Column>
+                <Column><Text text="Email" /></Column>
+                <Column><Text text="Contact" /></Column>
+                <Column><Text text="Appointment Date" /></Column>
+                <Column><Text text="Appointment Time" /></Column>
+                <Column><Text text="Status" /></Column>
+                <Column><Text text="Action" /></Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{viewModel>Id}" />
+                        <Text text="{viewModel>Fname} {viewModel>Lname}" />
+                        <Text text="{viewModel>Email}" />
+                        <Text text="{viewModel>Contact}" />
+                        <Text text="{viewModel>Appdate}" />
+                        <Text text="{viewModel>Apptime}" />
+                        <Text text="{viewModel>StatusText}" />
+                        <Button text="Prescribe" press="onPrescribe" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <HBox justifyContent="Center" style="margin-top: 20px;">
+            <Button text="Cancel Appointment" 
+                    press="onCancelAppointment" type="Reject"
+                    enabled="{= ${viewModel>/appointments}.length > 0 }" />
+        </HBox>
+        <MessageStrip
+            text="No appointments available for this doctor."
+            type="Warning"
+            visible="{= ${viewModel>/appointments}.length === 0 }" />
+    </VBox>
+</mvc:View>

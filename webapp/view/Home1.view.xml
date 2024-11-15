@@ -1,0 +1,24 @@
+<mvc:View controllerName="hospitalmanage.controller.Home1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+        <Page id="mainPage1" title="Welcome Doctor">
+                    <content>
+                    <HBox width="60%" alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
+
+                            <!-- View Appointment History Section -->
+                        
+                         <VBox alignItems="Center" class="sapUiSmallMargin">
+                                <Button icon="sap-icon://paper-plane" type="Emphasized" press="onNavToAppointment" />
+                                <Text text="Appointments for me"  class="iconText"/>
+                                <Link text="View Appointment History" press="onNavToAppointment" class="iconLink" />
+                            </VBox>
+                            <VBox alignItems="Center" class="sapUiSmallMargin">
+                        <Button icon="sap-icon://write-new-document" type="Emphasized" press="onPrescriptiongiven" />
+                        <Text text="Prescription Given" class="iconText" />
+                        <Link text="Prescription List" press="onPrescriptiongiven" class="iconLink" />
+                    </VBox>
+                    </HBox>
+
+                    </content>
+                </Page>
+</mvc:View>

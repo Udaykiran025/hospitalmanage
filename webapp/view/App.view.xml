@@ -1,0 +1,146 @@
+<mvc:View controllerName="hospitalmanage.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App id="app">
+    <Page id="loginPage" title="Login">
+            <content>
+           
+            <VBox alignItems="Center"  justifyContent="Center" class="mainContainer">
+             <Panel headerText="Hospital Management" class="loginPanel" width="333px"/>
+                
+                <IconTabBar id="homeTabBar" class="centeredTabBar">
+                    <!-- Patient Tab -->
+                    <items>
+                        <IconTabFilter key="patient" icon="sap-icon://person-placeholder" text="Patient">
+                            <VBox justifyContent="Center" alignItems="Center">
+                                <!-- Login Form -->
+                                <HBox id="loginFormContainer" justifyContent="Center" class="loginContainer" visible="true">
+                                    <VBox width="50%" alignItems="Center" justifyContent="Center" class="loginForm">
+                                        <Panel headerText="Patient Login" class="loginPanel" width="300px">
+                                            <VBox>
+                                                <Label text="Email-ID:"/>
+                                                <Input placeholder="Enter Email" id="patientEmail"/>
+                                                <Label text="Password:"/>
+                                                <Input placeholder="Enter Password" type="Password" id="patientPassword"/>
+                                                <Button text="Login" press="onPatientLogin" class="loginButton"/>
+                                            </VBox>
+                                        </Panel>
+                                    </VBox>
+                                </HBox>
+                                <HBox justifyContent="Center" class="loginContainer">
+                                    <VBox alignItems="Center" class="sapUiSmallMargin">
+                                            <Button text="Login" type="Accept" press="onShowLoginPress"/>
+                                        <Button text="Don't have an account? Register" type="Emphasized" press="onShowRegisterPress"/>
+                                        
+                                    </VBox>
+                                </HBox>
+                                <!-- Register Form -->
+                                <HBox id="registerFormContainer" justifyContent="Center" class="registerContainer" visible="false">
+                                    <VBox width="50%" alignItems="Center" justifyContent="Center" class="registerForm">
+                                        <Panel headerText="Patient Registration" class="registerPanel" width="300px">
+                                            <VBox>
+
+                                                <Label text="First Name:"/>
+                                                <Input placeholder="First Name" id="firstNameInput"/>
+                                                <Label text="Last Name:"/>
+                                                <Input placeholder="Last Name" id="lastNameInput"/>
+                                                <Label text="Email-ID:"/>
+                                                <Input placeholder="Enter Email" id="emailInput"/>
+                                                <Label text="Phone Number:"/>
+                                                <Input placeholder="Enter Phone Number" type="Number" maxLength="10" id="phoneInput"/>
+                                                <Label text="Password:"/>
+
+                                                <Input placeholder="Enter Password" type="Password" id="passwordInput1"/>
+                                                <Label text="Confirm Password:"/>
+                                                <Input placeholder="Confirm Password" type="Password" id="confirmPasswordInput"/>
+                                                <Label text="Gender:"/>
+                                                <RadioButtonGroup id="genderGroup">
+                                                    <RadioButton text="Male"/>
+                                                    <RadioButton text="Female"/>
+                                                </RadioButtonGroup>
+                                                <Button text="Register" press="onRegisterPress1" class="registerButton"/>
+                                            </VBox>
+                                        </Panel>
+                                    </VBox>
+                                </HBox>
+                            </VBox>
+                        </IconTabFilter>
+
+                        <!-- Doctor Tab -->
+
+                        <IconTabFilter
+                            key="doctor"
+                            icon="sap-icon://stethoscope"
+                            text="Doctor">
+                            <content>
+                                <HBox justifyContent="Center" class="loginContainer">                                    
+                                    <!-- Right Side Login Form -->
+                                    <VBox width="50%" alignItems="Center" justifyContent="Center" class="loginForm">
+                                        <Panel headerText="Doctor Login" class="loginPanel" width="300px">
+                                             <VBox alignItems="Center" class="sapUiSmallMargin">
+                               
+                                <Input placeholder="Username" id="doctorUser" />
+                                <Input placeholder="Password" type="Password" id="doctorPassword" />
+                                <Button text="Login" press="onDoctorLogin" />
+                            </VBox>
+                                        </Panel>
+                                    </VBox>
+                                </HBox>
+                            </content>
+                        </IconTabFilter>
+                       
+
+                        <!-- Administrator Tab -->
+                        <IconTabFilter
+                           key="admin"
+                            icon="sap-icon://business-card"
+                            text="Administrator">
+                            <content>
+                                <HBox justifyContent="Center" class="loginContainer">                                    
+                                    <!-- Right Side Login Form -->
+                                    <VBox width="50%" alignItems="Center" justifyContent="Center" class="loginForm">
+                                        <Panel headerText="Administrator Login" class="loginPanel" width="300px">
+                                           <VBox alignItems="Center" class="sapUiSmallMargin">
+                                            <Input placeholder="Username" id="usernameInput" />
+                                            <Input placeholder="Password" type="Password" id="passwordInput" />
+                                            <Button text="Login" press="onLoginPress" />
+                                     </VBox>
+                                        </Panel>
+                                    </VBox>
+                                </HBox>
+                            </content>
+                        </IconTabFilter>
+
+                    </items>
+                </IconTabBar>
+            </VBox>
+            </content>
+        </Page>
+
+        <SplitApp id="splitApp" visible="false">
+            <masterPages>
+                <Page id="menuPage" title="Menu">
+                    <List
+                        id="menuList"
+                        items="{leftmenuModel>/navigation}"
+                        itemPress="onItemSelect">
+                        <items>
+                            <StandardListItem id="_IDGenStandardListItem1"
+                                title="{leftmenuModel>title}"
+                                type="Navigation" />
+                        </items>
+                    </List>
+                </Page>
+            </masterPages>
+            <detailPages>
+                <Page id="detailPage" title="Welcome">
+                    <content>
+                        <Text id="_IDGenText1" text="Please select an option from the menu." />
+                    </content>
+                </Page>
+            </detailPages>
+        </SplitApp>
+
+    </App>
+</mvc:View>

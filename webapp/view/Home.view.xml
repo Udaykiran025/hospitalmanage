@@ -1,0 +1,48 @@
+<mvc:View controllerName="hospitalmanage.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="Home Page">
+        <content>
+            <VBox width="60%" alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
+                <!-- First row with three icons -->
+                <HBox justifyContent="SpaceAround" width="100%">
+                    <!-- Book My Appointment Section -->
+                    <VBox alignItems="Center" class="sapUiSmallMargin">
+                        <Button icon="sap-icon://doctor" type="Emphasized" press="onDoctorlist"  />
+                        <Text text="Doctor List" class="iconText" />
+                        <Link text="Doctor List" press="onDoctorlist" class="iconLink" />
+                    </VBox>
+                    <!-- View Appointment History Section -->
+                    <VBox alignItems="Center" class="sapUiSmallMargin">
+                        <Button icon="sap-icon://wounds-doc" type="Emphasized" press="onPatientlist" />
+                        <Text text="Patients List" class="iconText" />
+                        <Link text="Patients List" press="onPatientlist" class="iconLink" />
+                    </VBox>
+                    <!-- Appointment List Section -->
+                    <VBox alignItems="Center" class="sapUiSmallMargin">
+                        <Button icon="sap-icon://appointment" type="Emphasized" press="onAppointment"  />
+                        <Text text="Appointment List" class="iconText" />
+                        <Link text="Appointment List" press="onAppointment" class="iconLink" />
+                    </VBox>
+                </HBox>
+                
+                <!-- Second row with two icons -->
+                <HBox justifyContent="SpaceAround" width="100%" class="sapUiSmallMarginTop">
+                    <!-- Prescription List Section -->
+                    <VBox alignItems="Center" class="sapUiSmallMargin">
+                        <Button icon="sap-icon://write-new-document" type="Emphasized" press="onPrescription" />
+                        <Text text="Prescription List" class="iconText" />
+                        <Link text="Prescription List" press="onPrescription" class="iconLink" />
+                    </VBox>
+                    <!-- Add/Delete Doctor Section -->
+                    <VBox alignItems="Center" class="sapUiSmallMargin">
+                        <Button icon="sap-icon://stethoscope" type="Emphasized"  />
+                        <Text text="Doctor" class="iconText" />
+                        <Link text="Add Doctor" press="onAddDoctor" class="iconLink" />
+                        <Link text="Delete Doctor" press="onDeleteDoctor" class="iconLink" />
+                    </VBox>
+                </HBox>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

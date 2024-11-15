@@ -1,0 +1,50 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="hospitalmanage.controller.AppointmentHistory">
+
+    <VBox>
+        <Table id="appointmentTable"
+    items="{
+        path: 'viewModel>/appointments'
+    }"
+    itemPress="onAppointmentSelect"
+    mode="SingleSelect"> <!-- Set selection mode -->
+<!-- Ensure this references the correct controller method -->
+    <columns>
+        <Column>
+            <Text text="Appointment ID" />
+        </Column>
+        <Column>
+            <Text text="Doctor" />
+        </Column>
+        <Column>
+            <Text text="Appointment Date" />
+        </Column>
+        <Column>
+            <Text text="Appointment Time" />
+        </Column>
+        <Column>
+            <Text text="Status" />
+        </Column>
+    </columns>
+    <items>
+        <ColumnListItem>
+            <cells>
+                <Text text="{viewModel>Id}" />
+                <Text text="{viewModel>Doctor}" />
+                <Text text="{viewModel>Appdate}" />
+                <Text text="{viewModel>Apptime}" />
+                <Text text="{viewModel>UserstatusText}" />
+            </cells>
+        </ColumnListItem>
+    </items>
+</Table>
+<HBox justifyContent="Center" style="margin-top: 20px;">
+            <Button text="Cancel Appointment" 
+                    press="onCancelAppointment" type="Reject"
+                    enabled="{= ${viewModel>/appointments}.length > 0 }" />
+        </HBox>
+    </VBox>
+
+</mvc:View>
