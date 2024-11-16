@@ -39,4 +39,74 @@ An SAP Fiori application.
 
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
+#### Detail Description 
+
+##### Hospital Management System
+### Overview
+The Hospital Management System is a web-based application designed to streamline and manage hospital operations efficiently. The system features three user roles: Patient, Doctor, and Admin. Each role is equipped with specific functionalities to ensure smooth interaction and management of appointments, prescriptions, and other hospital activities. The system leverages HTML and JavaScript for the front-end, and SAP ABAP for the back-end.
+
+## Features
+## Home Page
+The home page consists of three tabs:
+Patient
+Doctor
+Admin
+Each tab allows the respective user type to log in and access their specific functionalities.
+
+## Patient Functionality
+After logging in with valid credentials, a patient can:
+
+## 1. Book Appointment:
+Patients can book appointments with available doctors by selecting the desired date and time.
+## 2. View Appointments:
+Patients can view a list of all their booked appointments, including appointment details such as the doctor's name, date, and time.
+## 3. View Prescriptions:
+Patients can access prescriptions provided by doctors for their consultations.
+## Navigation
+A left menu provides quick access to the functionalities:
+## 1. Book Appointment
+View Appointments
+## 2. View Prescriptions
+Icons are also available for direct navigation to the respective tabs.
+### Doctor Functionality
+After logging in with valid credentials, a doctor can:
+
+## 1. View Appointments:
+Doctors can view their schedule of appointments, including patient details and appointment timings.
+## 2. Give Prescription:
+Doctors can provide prescriptions for patients after consultations, including details about medications, dosage, and instructions.
+## Navigation
+A left menu provides quick access to:
+View Appointments
+Give Prescription
+## Admin Functionality
+After logging in with valid credentials, an admin can:
+
+## 1. View Doctors List:
+Admins can view a list of all registered doctors, including details like name, specialization, and contact information.
+## 2. View Patients List:
+Admins can access a list of all registered patients.
+## 3. View Appointments List:
+Admins can view all scheduled appointments across the hospital.
+## 4. View Prescriptions List:
+Admins can review all prescriptions provided by doctors.
+## 5. Add Doctor:
+Admins can add new doctors to the system by providing necessary details.
+## 6. Remove Doctor:
+Admins can remove existing doctors from the system if required.
+## Navigation
+A left menu provides quick access to:
+Doctors List
+Patients List
+Appointments List
+Prescriptions List
+Add Doctor
+Remove Doctor
+## Technologies Used
+## Front-End:
+HTML: For structuring the web pages.
+JavaScript: For dynamic user interactions and client-side validations.
+## Back-End:
+SAP ABAP: For managing the database, business logic, and server-side operations.
+
 
