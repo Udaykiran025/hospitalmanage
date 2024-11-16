@@ -112,7 +112,7 @@ Remove Doctor
 ## Technologies Used
 
 #### Front-End:
-HTML: For structuring the web pages.
+XML: For structuring the web pages.
 JavaScript: For dynamic user interactions and client-side validations.
 #### Back-End:
 SAP ABAP: For managing the database, business logic, and server-side operations.
